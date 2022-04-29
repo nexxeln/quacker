@@ -9,7 +9,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 900,
     lineHeight: 1.1,
     margin: 0,
-    padding: 0,
+    paddingTop: 10,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
