@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Title } from "@mantine/core";
+import Hero from "../components/Landing/Hero";
 
 const Home: NextPage = () => {
   return (
@@ -10,10 +10,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Just quack it!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Title align="center" order={1}>
-        Quack
-      </Title>
+      <Hero />
     </div>
   );
 };
