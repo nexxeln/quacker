@@ -1,10 +1,4 @@
-import {
-  createStyles,
-  useMantineTheme,
-  Text,
-  Container,
-  Button,
-} from "@mantine/core";
+import { createStyles, Text, Button } from "@mantine/core";
 import Link from "next/link";
 
 const BREAKPOINT = "@media (max-width: 768px)";
@@ -58,7 +52,6 @@ const useStyles = createStyles((theme) => ({
 
 const Hero = () => {
   const { classes, cx } = useStyles();
-  const theme = useMantineTheme();
   return (
     <div className={classes.wrapper}>
       <h1 className={classes.title}>
