@@ -2,10 +2,27 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  body      String
+  authorId  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  author    User     @relation(fields: [authorId], references: [id])
+}
+
+model User {
+  id    Int    @id @default(autoincrement())
+  name  String
+  posts Post[]
 }
