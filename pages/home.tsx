@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Heading from "../components/Home/Heading";
+import PostButton from "../components/Home/PostButton";
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Heading />
+      <PostButton />
     </div>
   );
 };
