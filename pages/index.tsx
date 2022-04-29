@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Title } from "@mantine/core";
 
 const Home: NextPage = () => {
   return (
@@ -10,7 +11,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>hello</h1>
+      <Title align="center" order={1}>
+        Quacker
+      </Title>
     </div>
   );
 };
