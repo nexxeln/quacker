@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Title align="center" order={1}>
-        Quacker
+        Quack
       </Title>
     </div>
   );
