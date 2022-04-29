@@ -14,6 +14,7 @@ datasource db {
 
 model Post {
   id        Int      @id @default(autoincrement())
+  title     String
   body      String
   hearts    Int      @default(0)
   createdAt DateTime @default(now())
