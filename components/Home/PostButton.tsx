@@ -15,7 +15,7 @@ const PostButton = () => {
   return (
     <div className={classes.button}>
       <Link passHref href="/create">
-        <Button component="a" variant="outline" fullWidth color="indigo">
+        <Button component="a" variant="outline" fullWidth>
           Create Post
         </Button>
       </Link>
