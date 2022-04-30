@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Heading from "../components/Home/Heading";
 import PostButton from "../components/Home/PostButton";
-import Post from "../components/Home/Posts/Post";
+import Posts from "../components/Home/Posts/Posts";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +15,9 @@ const Home: NextPage = () => {
       </Head>
       <Heading />
       <PostButton />
-      <Container mx="auto" pt="xl"></Container>
+      <Container mx="auto" pt="xl">
+        <Posts />
+      </Container>
     </div>
   );
 };
