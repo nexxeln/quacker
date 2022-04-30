@@ -1,21 +1,19 @@
 import { Paper, Text, Title } from "@mantine/core";
 import { FC } from "react";
+import { PostTypes } from "../../../lib/fetcher";
 
 type PostProps = {
-  title: string;
-  body: string;
-  hearts: number;
-  createdAt: string;
+  data: PostTypes;
 };
 
-const Post: FC<PostProps> = ({ title, body, hearts, createdAt }) => {
+const Post: FC<PostProps> = ({ data }) => {
   return (
     <>
       <Paper shadow="md" radius="md" p="md" mb="xl" withBorder>
         <Title pb={20} sx={{ lineHeight: 1.15 }}>
-          {title}
+          {data.title}
         </Title>
-        <Text lineClamp={3}>{body}</Text>
+        <Text lineClamp={3}>{data.body}</Text>
       </Paper>
     </>
   );
