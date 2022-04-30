@@ -1,6 +1,6 @@
 import { FC } from "react";
 import useSWR from "swr";
-import { PostTypes, postFetcher } from "../../../lib/fetcher";
+import { postsFetcher } from "../../../lib/fetcher";
 import Post from "./Post";
 
 const Card = ({ data }: any) => {
@@ -15,7 +15,7 @@ const Card = ({ data }: any) => {
 };
 
 const Posts: FC = () => {
-  const { data } = useSWR("/api/posts", postFetcher);
+  const { data } = useSWR("/api/posts", postsFetcher);
   return (
     <>
       <Card data={data} />
