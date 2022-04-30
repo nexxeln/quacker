@@ -1,12 +1,12 @@
 export const postFetcher = async (
   input: RequestInfo,
   init?: RequestInit
-): Promise<Post[]> => {
+): Promise<PostTypes[]> => {
   const res = await fetch(input, init);
   return res.json();
 };
 
-export type Post = {
+export type PostTypes = {
   id: number;
   title: string;
   body: string;
