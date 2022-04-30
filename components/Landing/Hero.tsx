@@ -70,12 +70,7 @@ const Hero = () => {
       </Text>
 
       <Link passHref href="/home">
-        <Button
-          component="a"
-          className={classes.button}
-          variant="light"
-          color="indigo"
-        >
+        <Button component="a" className={classes.button} variant="light">
           Say Something
         </Button>
       </Link>
