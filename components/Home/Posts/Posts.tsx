@@ -8,7 +8,7 @@ const Card = ({ data }: any) => {
     <div>
       {/* @ts-ignore */}
       {data?.map((post, index) => (
-        <Post key={index} data={post} />
+        <Post key={index} data={post} lineClamp />
       ))}
     </div>
   );
