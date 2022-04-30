@@ -5,10 +5,15 @@ import { Button, Textarea, TextInput } from "@mantine/core";
 const PostInput = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [error, setError] = useState("");
 
   const router = useRouter();
 
   const handleClick = async () => {
+    if (title.length > 35) {
+      return setError("Title must be less than 35 characters");
+    }
+
     await fetch("/api/posts", {
       method: "POST",
       headers: {
@@ -30,9 +35,13 @@ const PostInput = () => {
     <>
       <TextInput
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => {
+          setTitle(e.target.value);
+          setError("");
+        }}
         label="Title"
         required
+        error={error}
         mx={20}
         my={10}
       />
