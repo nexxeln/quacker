@@ -17,7 +17,7 @@ export default async function handler(
 }
 
 const getPostById = async (id: number) => {
-  const post = await prisma.post.findMany({
+  const post = await prisma.post.findUnique({
     where: {
       id: id,
     },
