@@ -10,8 +10,8 @@ const PostInput = () => {
   const router = useRouter();
 
   const handleClick = async () => {
-    if (title.length > 35) {
-      return setError("Title must be less than 35 characters");
+    if (title.length > 50) {
+      return setError("Title must be less than 50 characters");
     }
 
     await fetch("/api/posts", {
