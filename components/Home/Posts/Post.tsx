@@ -37,8 +37,7 @@ const Post: FC<PostProps> = ({ data, lineClamp }) => {
         opened={opened}
         onClose={() => setOpened(false)}
         size="xl"
-        centered
-        overflow="inside"
+        overflow="outside"
         transition="fade"
         transitionDuration={300}
         transitionTimingFunction="ease"
