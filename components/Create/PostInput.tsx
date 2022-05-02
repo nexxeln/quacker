@@ -6,6 +6,7 @@ const PostInput = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
 
@@ -13,6 +14,8 @@ const PostInput = () => {
     if (title.length > 50) {
       return setError("Title must be less than 50 characters");
     }
+
+    setLoading(true);
 
     await fetch("/api/posts", {
       method: "POST",
@@ -56,7 +59,13 @@ const PostInput = () => {
         my={10}
       />
 
-      <Button onClick={handleClick} variant="light" mx={20} my={10}>
+      <Button
+        onClick={handleClick}
+        variant="light"
+        loading={loading}
+        mx={20}
+        my={10}
+      >
         Submit
       </Button>
     </>
